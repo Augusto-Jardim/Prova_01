@@ -1,47 +1,53 @@
-<h1>Conversor de moeda</h1>
-
-<!-- entrada de valor e seleção de medida -->
-<div>
-  <label for="inputValue">Valor de entrada Moeda 1:</label>
-  <input type="number" id="inputValue" [(ngModel)]="inputValue" />
+<div class="container text-center">
+  <h1>Conversor de moeda</h1>
 </div>
+<div class="container bg-secondary rounded w-50 p-3 text-center w-25 p-3">
+  <!-- entrada de valor e seleção de medida -->
+  <div>
+    <label for="inputValue">Valor de entrada Moeda 1:</label>
+    <input type="number" id="inputValue" [(ngModel)]="inputValue" />
+  </div>
 
-<div>
-  <label for="inputUnit">Unidade de entrada Moeda 1:</label>
-  <select
-    class="form-select"
-    aria-label="Default select example"
-    id="inputUnit"
-    [(ngModel)]="inputUnit"
-  >
-    <option value="dolar">Dólar</option>
-    <option value="euro">Euro</option>
-    <option value="real">Real</option>
-  </select>
+  <div>
+    <label for="inputUnit">Unidade de entrada Moeda 1:</label>
+    <select
+      class="form-select"
+      aria-label="Default select example"
+      id="inputUnit"
+      [(ngModel)]="inputUnit"
+    >
+      <option value="dolar">Dólar</option>
+      <option value="euro">Euro</option>
+      <option value="real">Real</option>
+    </select>
+  </div>
+
+  <!-- saída de valor e seleção de medida -->
+  <div>
+    <label for="cotacaoValue">cotacao:</label>
+    <input type="number" id="cotacaoValue" [(ngModel)]="cotacaoValue" />
+  </div>
+
+  <div>
+    <label for="outputUnit">Unidade de saída Moeda 2:</label>
+    <select
+      class="form-select"
+      aria-label="Default select example"
+      id="outputUnit"
+      [(ngModel)]="outputUnit"
+    >
+      <option value="dolar">Dólar</option>
+      <option value="euro">Euro</option>
+      <option value="real">Real</option>
+    </select>
+  </div>
+
+  <!-- saída de valor e seleção de medida -->
+  <div>
+    <label for="outputValue">Valor de saída:</label>
+    <input type="number" id="outputValue" [(ngModel)]="outputValue" disabled />
+  </div>
+
+  <!-- botão de conversão -->
+  <button class="btn btn-primary" (click)="convertValue()">Converter</button>
 </div>
-
-<!-- saída de valor e seleção de medida -->
-<div>
-  <label for="cotacaoValue">cotacao:</label>
-  <input type="number" id="cotacaoValue" [(ngModel)]="cotacaoValue" />
-</div>
-
-<div>
-  <label for="outputUnit">Unidade de saída Moeda 2:</label>
-  <select id="outputUnit" [(ngModel)]="outputUnit">
-    <option value="dolar">Dólar</option>
-    <option value="euro">Euro</option>
-    <option value="real">Real</option>
-  </select>
-</div>
-
-<!-- saída de valor e seleção de medida -->
-<div>
-  <label for="outputValue">Valor de saída:</label>
-  <input type="number" id="outputValue" [(ngModel)]="outputValue" disabled />
-</div>
-
-<!-- botão de conversão -->
-<button class="btn btn-primary" (click)="convertValue()">Converter</button>
-
-<br /><br /><br /><br /><br /><br />
