@@ -7,4 +7,23 @@ import { Component } from '@angular/core';
 })
 export class ConversorComponent {
 
+   // propriedades para armazenar o valor e a unidade de entrada
+ inputValue: number = 0;
+ inputUnit: string = 'dolar';
+
+ // propriedades para armazenar o valor e a unidade de saída
+ outputValue: number = 0;
+ cotacaoValue: number = 0;
+ outputUnit: string = 'dolar';
+
+ // função para realizar as conversões de medida
+ convertValue() {
+
+       this.outputValue = this.inputValue * this.cotacaoValue;
+
+ }
+
+
+
+
 }

@@ -2,22 +2,43 @@
 
 <!-- entrada de valor e seleção de medida -->
 <div>
-  <label for="inputValue">Valor de entrada:</label>
+  <label for="inputValue">Valor de entrada Moeda 1:</label>
   <input type="number" id="inputValue" [(ngModel)]="inputValue" />
 </div>
 
 <div>
-  <label for="inputUnit">Unidade de entrada:</label>
+  <label for="inputUnit">Unidade de entrada Moeda 1:</label>
   <select
     class="form-select"
     aria-label="Default select example"
     id="inputUnit"
     [(ngModel)]="inputUnit"
   >
-    <option value="Dólar">Dólar</option>
-    <option value="Euro">Quilômetro</option>
-    <option value="Yuan">Yuan</option>
+    <option value="dolar">Dólar</option>
+    <option value="euro">Euro</option>
+    <option value="real">Real</option>
   </select>
+</div>
+
+<!-- saída de valor e seleção de medida -->
+<div>
+  <label for="cotacaoValue">cotacao:</label>
+  <input type="number" id="cotacaoValue" [(ngModel)]="cotacaoValue" />
+</div>
+
+<div>
+  <label for="outputUnit">Unidade de saída Moeda 2:</label>
+  <select id="outputUnit" [(ngModel)]="outputUnit">
+    <option value="dolar">Dólar</option>
+    <option value="euro">Euro</option>
+    <option value="real">Real</option>
+  </select>
+</div>
+
+<!-- saída de valor e seleção de medida -->
+<div>
+  <label for="outputValue">Valor de saída:</label>
+  <input type="number" id="outputValue" [(ngModel)]="outputValue" disabled />
 </div>
 
 <!-- botão de conversão -->
