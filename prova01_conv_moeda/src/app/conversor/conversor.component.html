@@ -1,15 +1,15 @@
 <div class="container text-center">
   <h1>Conversor de moeda</h1>
 </div>
-<div class="container bg-secondary rounded w-50 p-3 text-center w-25 p-3">
+<div class="container bg-secondary rounded w-25 p-3">
   <!-- entrada de valor e seleção de medida -->
   <div>
     <label for="inputValue">Valor de entrada Moeda 1:</label>
     <input type="number" id="inputValue" [(ngModel)]="inputValue" />
   </div>
 
-  <div>
-    <label for="inputUnit">Unidade de entrada Moeda 1:</label>
+  <div class="container">
+    <label for="inputUnit">Unidade de entrada Moeda 1:</label><br />
     <select
       class="form-select"
       aria-label="Default select example"
@@ -49,5 +49,7 @@
   </div>
 
   <!-- botão de conversão -->
-  <button class="btn btn-primary" (click)="convertValue()">Converter</button>
+  <button class="btn btn-primary text-center" (click)="convertValue()">
+    Converter
+  </button>
 </div>

@@ -20,11 +20,14 @@ export class ConversorComponent {
  // função para realizar as conversões de medida
  convertValue() {
 
-       this.outputValue = this.inputValue * this.cotacaoValue;
+
+          this.outputValue = this.inputValue * this.cotacaoValue;
+
+    }
 
  }
 
 
 
 
-}
+
