@@ -1,0 +1,24 @@
+<h1>Conversor de moeda</h1>
+
+<!-- entrada de valor e seleção de medida -->
+<div>
+  <label for="inputValue">Valor de entrada:</label>
+  <input type="number" id="inputValue" [(ngModel)]="inputValue" />
+</div>
+
+<div>
+  <label for="inputUnit">Unidade de entrada:</label>
+  <select
+    class="form-select"
+    aria-label="Default select example"
+    id="inputUnit"
+    [(ngModel)]="inputUnit"
+  >
+    <option value="Dólar">Dólar</option>
+    <option value="Euro">Quilômetro</option>
+    <option value="Yuan">Yuan</option>
+  </select>
+</div>
+
+<!-- botão de conversão -->
+<button class="btn btn-light" (click)="convertValue()">Converter</button>
