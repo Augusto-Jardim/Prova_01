@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-conversor',
   templateUrl: './conversor.component.html',
@@ -15,6 +15,7 @@ export class ConversorComponent {
  outputValue: number = 0;
  cotacaoValue: number = 0;
  outputUnit: string = 'dolar';
+
 
  // função para realizar as conversões de medida
  convertValue() {
